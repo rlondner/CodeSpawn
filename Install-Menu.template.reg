@@ -1,0 +1,49 @@
+Windows Registry Editor Version 5.00
+
+; --- Root menu ---
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCodingAgent]
+"MUIVerb"="LLM Coding Agent"
+"Icon"="{app}\\icon.ico,0"
+"SubCommands"="CodingAgent.All;CodingAgent.Claude;CodingAgent.Gemini;CodingAgent.Codex;CodingAgent.Qwen;CodingAgent.Qwen35"
+
+; --- Command 1: All LLMs ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.All]
+@="All LLMs (Tabs)"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.All\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"all\""
+
+; --- Command 2: Claude Code ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Claude]
+@="Claude Code"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Claude\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"claude\""
+
+; --- Command 3: Gemini ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Gemini]
+@="Gemini"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Gemini\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"gemini\""
+
+; --- Command 4: Codex ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Codex]
+@="Codex"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Codex\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"codex\""
+
+; --- Command 5: Qwen3-Coder ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Qwen]
+@="Qwen3-Coder"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Qwen\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"qwen3-coder\""
+
+; --- Command 6: Qwen 3.5 ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Qwen35]
+@="Qwen 3.5"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Qwen35\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"qwen3.5\""
