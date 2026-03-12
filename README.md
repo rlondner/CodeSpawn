@@ -1,4 +1,6 @@
 # CodeSpawn 🚀
+![CodeSpawn Header](./header.png)
+
 
 **CodeSpawn** is a Windows automation utility that integrates directly into your File Explorer context menu. It allows you to instantly summon your favorite AI coding agents (Claude, Gemini, Codex, Qwen) directly into your current working directory.
 
