@@ -1,6 +1,6 @@
 # CodeSpawn 🚀
 
-**CodeSpawn** is a Windows automation utility that integrates directly into your File Explorer context menu. It allows you to instantly summon your favorite AI coding agents (Claude, Gemini, Codex, Qwen) directly into your current working directory. 
+**CodeSpawn** is a Windows automation utility that integrates directly into your File Explorer context menu. It allows you to instantly summon your favorite AI coding agents (Claude, Gemini, Codex, Qwen) directly into your current working directory.
 
 Instead of manually opening a terminal, creating directories, and launching your CLI tools one by one, CodeSpawn does it all in a single click. It automatically generates isolated subfolders for your workspace and launches your agents in beautifully organized, correctly titled Windows Terminal tabs.
 
@@ -11,6 +11,13 @@ Instead of manually opening a terminal, creating directories, and launching your
 * **Multi-Tab Workspace:** Select "All LLMs (Tabs)" to instantly spawn all your agents side-by-side in a single Windows Terminal instance.
 * **Tab Protection:** Prevents CLI tools from hijacking your tab titles so your workspace stays organized.
 * **Portable Installation:** Simple PowerShell installation script that dynamically configures your registry based on wherever you save the folder.
+
+## Ollama Models used
+
+Besides Claude Code, Gemini and Codex, the tool uses the following Ollama models:
+
+* [Qwen 3.5 395b in Ollama Cloud](https://ollama.com/library/qwen3.5:397b-cloud)
+* [Qwen 3 Coder Next in Ollama Cloud](https://ollama.com/library/qwen3-coder-next:cloud)
 
 ---
 
@@ -31,7 +38,7 @@ You must have the respective CLI tools installed and authenticated on your machi
 * **Anthropic / Claude:** An active Anthropic account/API key and the `claude` CLI installed (e.g., Claude Code).
 * **Google / Gemini:** A Google account/API key and your preferred `gemini` CLI wrapper installed.
 * **OpenAI / Codex:** An OpenAI account/API key and your preferred `codex` CLI wrapper installed.
-* **Ollama (for Qwen):** [Ollama](https://ollama.com/) installed locally along with an account in standing at ollama.com in order to use the Ollama Cloud version of the Qwen models.
+* **Ollama (for Qwen):** [Ollama](https://ollama.com/) installed locally along with an account in standing in order to use the Ollama Cloud version of the Qwen models.
 
 ---
 
