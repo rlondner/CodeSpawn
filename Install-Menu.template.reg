@@ -4,14 +4,21 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Directory\shell\OpenCodingAgent]
 "MUIVerb"="LLM Coding Agent"
 "Icon"="{app}\\icon.ico,0"
-"SubCommands"="CodingAgent.All;CodingAgent.Claude;CodingAgent.Gemini;CodingAgent.Codex;CodingAgent.Qwen;CodingAgent.Qwen35"
+"SubCommands"="CodingAgent.AllTabs;CodingAgent.AllPanes;CodingAgent.Claude;CodingAgent.Gemini;CodingAgent.Codex;CodingAgent.Qwen;CodingAgent.Qwen35"
 
-; --- Command 1: All LLMs ---
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.All]
+; --- Command 1: All LLMs in Tabs ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.AllTabs]
 @="All LLMs (Tabs)"
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.All\command]
-@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"all\""
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.AllTabs\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"all\" -Layout \"tabs\""
+
+; --- Command: All LLMs in Tabs ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.AllPanes]
+@="All LLMs (Panes)"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.AllPanes\command]
+@="pwsh.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"{app}\\Launch-CodingLLM_CLI.ps1\" -TargetDirectory \"%1\" -LLM \"all\" -Layout \"panes\""
 
 ; --- Command 2: Claude Code ---
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\CodingAgent.Claude]
