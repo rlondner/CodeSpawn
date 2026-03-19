@@ -4,13 +4,14 @@
 
 **CodeSpawn** is a Windows automation utility that integrates directly into your File Explorer context menu. It allows you to instantly summon your favorite AI coding agents (Claude, Gemini, Codex, Qwen) directly into your current working directory.
 
-Instead of manually opening a terminal, creating directories, and launching your CLI tools one by one, CodeSpawn does it all in a single click. It automatically generates isolated subfolders for your workspace and launches your agents in beautifully organized, correctly titled Windows Terminal tabs.
+Instead of manually opening a terminal, creating directories, and launching your CLI tools one by one, CodeSpawn does it all in a single click. It automatically generates isolated subfolders for your workspace and launches your agents in beautifully organized, correctly titled Windows Terminal tabs or side-by-side panes.
 
 ## ✨ Features
 
 * **1-Click Context Menu:** Right-click any folder to access the "LLM Coding Agent" menu.
 * **Auto-Directory Setup:** Automatically creates `claude`, `gemini`, `codex`, `qwen3-coder` and/or `qwen3.5`  subfolders in your target path.
-* **Multi-Tab Workspace:** Select "All LLMs (Tabs)" to instantly spawn all your agents side-by-side in a single Windows Terminal instance.
+* **Multi-Tab Workspace:** Select "All LLMs (Tabs)" to instantly spawn all your agents in separate tabs within a single Windows Terminal instance.
+* **Side-by-Side Panes:** Select "All LLMs (Panes)" to launch all agents in vertical split panes for simultaneous visibility.
 * **Tab Protection:** Prevents CLI tools from hijacking your tab titles so your workspace stays organized.
 * **Portable Installation:** Simple PowerShell installation script that dynamically configures your registry based on wherever you save the folder.
 
@@ -65,7 +66,9 @@ The script will read the `Install-Menu.template.reg` file, inject your current f
 1. Open File Explorer.
 2. Right-click on any folder icon.
 3. Select **LLM Coding Agent**.
-4. Choose the specific agent you want to launch, or select **All LLMs (Tabs)** to launch a comprehensive AI workstation.
+4. Choose the specific agent you want to launch, or select:
+   * **All LLMs (Tabs)** — each agent in its own tab.
+   * **All LLMs (Panes)** — all agents side-by-side in vertical split panes.
 
 ---
 
